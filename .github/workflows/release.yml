@@ -8,12 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Forgebox Deployment
-        uses: michaelborn/workflow-dispatcher@master
+        uses: peter-evans/repository-dispatch@v1
         with:
-          owner: michaelborn
-          repo: forgebox-cfengine-publisher
           token: ${{ secrets.PAT }}
-          event_type: forgebox_deploy
-          client_payload: '{"git-ref": "${{ github.event.inputs.git-ref }}"}'
-          wait_time: 5
-          max_time: 180
+          event-type: forgebox_deploy
