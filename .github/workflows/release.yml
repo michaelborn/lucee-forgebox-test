@@ -7,8 +7,9 @@ jobs:
     name: Build Release
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Forgebox Deployment
+      - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
+          repository: michaelborn/forgebox-cfengine-publisher
           token: ${{ secrets.PAT }}
           event-type: forgebox_deploy
