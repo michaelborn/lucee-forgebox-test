@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Forgebox Deployment
-        uses: adityakar/workflow-dispatcher
+        uses: adityakar/workflow-dispatcher@v1.0
         with:
           owner: michaelborn
           repo: forgebox-cfengine-publisher
