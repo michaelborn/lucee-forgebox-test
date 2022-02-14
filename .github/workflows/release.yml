@@ -11,7 +11,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
           repository: michaelborn/forgebox-cfengine-publisher
-          # Personal access token created by the target repo's user or organization
+          # Personal access token created by the target repo's user or organization.
           token: ${{ secrets.PAT }}
           # must be one of the `types` configured under the `repository_dispatch` event in the target repo
           event-type: forgebox_deploy
